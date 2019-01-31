@@ -9,3 +9,9 @@ services:
       - "443:443"
     volumes:
       - ${CERT_BASE_PATH}:/certs
+    networks:
+      - proxynet
+
+networks:
+  proxynet:
+    name: reverse-proxy-net
